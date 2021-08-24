@@ -1,0 +1,1 @@
+{"version":3,"file":"vue.js","sources":["../../src/index.js"],"sourcesContent":["function Vue(option){\r\n    console.log('你好啊,李银河');\r\n}\r\n\r\n\r\nexport default Vue"],"names":["Vue","option","console","log"],"mappings":";;;;;;IAAA,SAASA,GAAT,CAAaC,MAAb,EAAoB;IAChBC,EAAAA,OAAO,CAACC,GAAR,CAAY,SAAZ;IACH;;;;;;;;"}
