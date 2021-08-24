@@ -5,7 +5,7 @@
 }(this, (function () { 'use strict';
 
     function Vue(option) {
-      console.log('你好啊,李银河');
+      console.log('你好啊,李银河1');
     }
 
     return Vue;
