@@ -48,7 +48,9 @@
       _classCallCheck(this, Obsereve);
 
       //使用defineProperty 重新定义属性
-      this.walk(value);
+      if (Array.isArray(value)) ; else {
+        this.walk(value);
+      }
     }
 
     _createClass(Obsereve, [{

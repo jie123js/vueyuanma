@@ -3,8 +3,13 @@
 class Obsereve{
     constructor(value){
         //使用defineProperty 重新定义属性
-
-       this.walk(value)
+        if(Array.isArray(value)){
+            //我们希望调用push pop shift unshift splice sort reserve重写
+            //简称函数劫持、切片编程
+        }else{
+            this.walk(value)
+        }
+       
         
     }
     walk(data){
