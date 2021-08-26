@@ -6,8 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./dist/umd/vue.js"></script>
+    <div id="app"></div>
     <script>
-        let vm = new Vue()
+      
+        let vm = new Vue(
+            {
+            el: '#app',
+            data(){
+                return {
+                    a:{a:{a:{a:1}}}
+                }
+            }
+            }
+        )
+//默认弄个数据会递归去用defineProperty进行拦截,性能不太好,所以vue3使用了proxy
+/* 开发中很少对数组的索引进行操作,所以数组要单独处理,
+而且为了性能考虑,不对数组进行拦截,如果是arr[999999999] */
+//那我们就拦截可以改变数组的方法进行操作
+       vm._data.a={b:1}
+      
+       vm._data.a.b=100
+       
     </script>
 </head>
 <body>
